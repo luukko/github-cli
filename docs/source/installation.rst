@@ -2,7 +2,7 @@
 Installation
 ============
 
-*on most UNIX-like systems, you'll probably need to run the following 
+*on most UNIX-like systems, you'll probably need to run the following
 `install` commands as root or by using sudo*
 
 pip
@@ -33,18 +33,18 @@ source
   $ git clone git://github.com/jsmits/github-cli.git
   $ cd github-cli
   $ python setup.py install
-  
-as a result, the ``ghi`` executable will be installed into a system ``bin`` 
+
+as a result, the ``ghi`` executable will be installed into a system ``bin``
 directory
 
-========  
+========
 Download
 ========
 
 Python Package Index
 ====================
 
-You can download source tarballs from PyPi 
+You can download source tarballs from PyPi
 `here <http://pypi.python.org/pypi/github-cli>`_.
 
 For older versions, use something like this:
@@ -54,7 +54,7 @@ Change the version to whatever version you would like to view and/or download.
 GitHub
 ======
 
-Of course, you can always get the latest source code from the 
+Of course, you can always get the latest source code from the
 `git repository <http://github.com/jsmits/github-cli/>`_:
 
 ::

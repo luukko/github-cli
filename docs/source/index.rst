@@ -10,10 +10,10 @@ GitHub Issues (v2) - CLI
 About
 =====
 
-Installing `github-cli <http://packages.python.org/github-cli/>`_ will provide an 
-executable called ``ghi``, that can be used to access all of `GitHub 
-<http://www.github.com/>`_'s documented `Issues API 
-<http://develop.github.com/p/issues.html>`_ (v2) functionality from your 
+Installing `github-cli <http://packages.python.org/github-cli/>`_ will provide an
+executable called ``ghi``, that can be used to access all of `GitHub
+<http://www.github.com/>`_'s documented `Issues API
+<http://develop.github.com/p/issues.html>`_ (v2) functionality from your
 command-line.
 It is written in `Python <http://www.python.org/>`_.
 
@@ -22,8 +22,7 @@ Contents
 
 .. toctree::
    :maxdepth: 2
-   
+
    installation
    configuration
    usage
-   
