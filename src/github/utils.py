@@ -163,6 +163,21 @@ class Pager(object):
         self.cmd = ''
 
         if hasattr(sys.stdout, 'isatty') and sys.stdout.isatty():
+            # use core.pager if it is set
+            command = "git config core.pager"
+            stdout, stderr = Popen(command, shell=True, stdin=PIPE, stdout=PIPE,
+                stderr=PIPE).communicate()
+            if stderr:
+                for line in stderr.splitlines():
+                    print line
+                sys.exit(1)
+            if stdout:
+                cmd = stdout.strip()
+                self.proc = Popen(cmd, shell=True, stdin=PIPE, stderr=PIPE)
+                self.file = self.proc.stdin
+                self.cmd = cmd
+                return
+            # try some fallbacks
             pager_commands = ['more -EMR', 'more', 'less -MR', 'less']
             for cmd in pager_commands:
                 if hasattr(os, 'system') and \
