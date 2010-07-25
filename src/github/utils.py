@@ -177,6 +177,13 @@ class Pager(object):
                 self.file = self.proc.stdin
                 self.cmd = cmd
                 return
+            # use PAGER if it is set
+            cmd = os.getenv("PAGER")
+            if cmd:
+                self.proc = Popen(cmd, shell=True, stdin=PIPE, stderr=PIPE)
+                self.file = self.proc.stdin
+                self.cmd = cmd
+                return
             # try some fallbacks
             pager_commands = ['more -EMR', 'more', 'less -MR', 'less']
             for cmd in pager_commands:
