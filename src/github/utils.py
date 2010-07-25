@@ -198,10 +198,6 @@ class Pager(object):
 
     def close(self):
         if self.proc:
-            # if cmd is 'less' and it is still running, tell the user
-            # how to quit
-            if 'less' in self.cmd and self.proc.poll() != None:
-                self.write("press q to quit")
             self.file.close()
             try:
                 self.proc.wait()
