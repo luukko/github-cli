@@ -185,7 +185,7 @@ class Pager(object):
                 self.cmd = cmd
                 return
             # try some fallbacks
-            pager_commands = ['more -EMR', 'more', 'less -MR', 'less']
+            pager_commands = ['less -FRX', 'less', 'more']
             for cmd in pager_commands:
                 if hasattr(os, 'system') and \
                               os.system('(%s) 2>/dev/null' % cmd) == 0:
